@@ -1,4 +1,7 @@
 A PyTorch implementation of "Confused and Disentangled Distribution Alignment for Unsupervised Universal Adaptive Object Detection" (under review)
+
+
+
 Our code is conducted based on [faster-rcnn.pytorch](https://github.com/jwyang/faster-rcnn.pytorch), please setup the framework by it.
 
 # Preparation
@@ -21,9 +24,8 @@ the format of datasets is similar with VOC,you just need to split train.txt to t
 3 Train the model
 
 ### train cityscapes -> cityscapes-foggy
-CUDA_VISIBLE_DEVICES=GPU_ID python da_trainval_net.py --dataset cityscape --net vgg16 --bs 1 --lr 2e-3 --lr_decay_step 6 --cuda
+CUDA_VISIBLE_DEVICES=GPU_ID python da_trainval_net.py --dataset cityscape --net vgg16 --bs 1 --lr 1e-3 --lr_decay_step 6 --cuda
 
 ### Test model in target domain 
 CUDA_VISIBLE_DEVICES=GPU_ID python test.py --dataset cityscape --part test_t --model_dir=# The path of your pth model --cuda
-
 
